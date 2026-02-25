@@ -21,7 +21,7 @@ int main(){
 }
 */
 
-// Maximum sum of subarray
+// Maximum sum of subarray optimized
 /*
 #include <iostream>
 #include <vector>
@@ -49,7 +49,6 @@ int main()
 */
 
 // Maximum sum of subarray using kadan's algorithm
-
 #include <iostream>
 #include <vector>
 #include <climits>
@@ -63,8 +62,8 @@ int maxSubArray(vector<int>& nums){
             currSum += val;
             maxSum = max(maxSum, currSum);
 
-            if(currSum < 0){
-                currSum = 0;
+            if(currSum < 0){ //remove negative sum subarray
+                currSum = 0; 
             }
         }
         return maxSum;
